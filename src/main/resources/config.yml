@@ -1,0 +1,255 @@
+# ============================================================
+#  MossDemirci - Yapılandırma Dosyası
+#  Yapımcı: wulnrydev
+#  Tüm mesajlar ve ayarlar buradan özelleştirilebilir.
+# ============================================================
+
+# Prefix - Tüm mesajların başına eklenir
+prefix: "&#15FF08&lSkyBlock &8▸ "
+
+# ============================================================
+#  Mesajlar
+#  Tüm mesajlarda renk kodları ve hex renk kodları (&#RRGGBB)
+#  kullanılabilir. Yer tutucular: {cost}, {item}
+# ============================================================
+messages:
+  gui-opened: "&7Demirci menüsü açıldı."
+  no-permission: "&cBu komutu kullanma yetkiniz yok!"
+  reload-success: "&#00D420Config başarıyla yeniden yüklendi!"
+  smithing-blocked: "&cVanilla yöntemle netherite eşya üretemezsiniz! &7/demirci &ckomutunu kullanın."
+  not-enough-items: "&cGerekli eşyalar envanterinizde bulunamadı!"
+  not-enough-money: "&cYeterli bakiyeniz bulunmuyor! &7Gereken: &#ffd500{cost} Dinar"
+  diamond-not-full-durability: "&cElmas eşyanızın durability'si tam (hasarsız) olmalıdır!"
+  craft-success: "&#00D420{item} &7başarıyla üretildi!"
+  inventory-full: "&cEnvanterinizde yeterli yer yok!"
+  vault-not-found: "&cEkonomi sistemi bulunamadı!"
+  player-only: "&cBu komut sadece oyuncular tarafından kullanılabilir!"
+
+# ============================================================
+#  Vanilla Netherite Engelleme
+#  true = Smithing Table ile netherite üretim engellenir
+#  false = Vanilla davranış korunur
+# ============================================================
+block-vanilla-netherite: true
+
+# ============================================================
+#  GUI Ayarları
+#  Menü boyutu 9'un katları olmalıdır: 9, 18, 27, 36, 45, 54
+# ============================================================
+gui:
+  title: "&0Demirci Menüsü"
+  size: 45
+
+  # Süsleme / Dekorasyon Cam Panelleri
+  decoration:
+    enabled: true
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+    # Bu slotlara cam panel yerleştirilir (0-indexed)
+    # Her satır virgülle ayrılmış slot numaralarından oluşur
+    slots:
+      - "0,1,2,3,4,5,6,7,8"
+      - "9,11,13,15,17"
+      - "18,19,20,21,22,23,24,25,26"
+      - "27,34,35"
+      - "36,37,38,39,40,41,42,43,44"
+
+# ============================================================
+#  Eşya Gereksinimleri
+#  Her eşya için slot, görünüm, gereksinimler ve sonuç
+#  tamamen özelleştirilebilir.
+#
+#  Zırh sırası (Satır 2): Kask(10), Göğüslük(12), Pantolon(14), Ayakkabı(16)
+#  Alet sırası (Satır 4): Kılıç(28), Kazma(29), Balta(30), Kürek(31), Çapa(32/33)
+# ============================================================
+items:
+  # ─────────── ZIRHLAR ───────────
+  netherite_helmet:
+    slot: 10
+    display-material: NETHERITE_HELMET
+    display-name: "&#00D420Netherite Kask"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Kask &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x2"
+      - "&7  ● &fElmas &8x100"
+      - "&7  ● &#ffd500500.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_HELMET
+    required-smithing-template: 1
+    required-netherite-ingot: 2
+    required-diamond: 100
+    required-money: 500000
+    result-item: NETHERITE_HELMET
+
+  netherite_chestplate:
+    slot: 12
+    display-material: NETHERITE_CHESTPLATE
+    display-name: "&#00D420Netherite Göğüslük"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Göğüslük &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x3"
+      - "&7  ● &fElmas &8x100"
+      - "&7  ● &#ffd500750.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_CHESTPLATE
+    required-smithing-template: 1
+    required-netherite-ingot: 3
+    required-diamond: 100
+    required-money: 750000
+    result-item: NETHERITE_CHESTPLATE
+
+  netherite_leggings:
+    slot: 14
+    display-material: NETHERITE_LEGGINGS
+    display-name: "&#00D420Netherite Pantolon"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Pantolon &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x3"
+      - "&7  ● &fElmas &8x100"
+      - "&7  ● &#ffd500750.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_LEGGINGS
+    required-smithing-template: 1
+    required-netherite-ingot: 3
+    required-diamond: 100
+    required-money: 750000
+    result-item: NETHERITE_LEGGINGS
+
+  netherite_boots:
+    slot: 16
+    display-material: NETHERITE_BOOTS
+    display-name: "&#00D420Netherite Ayakkabı"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Ayakkabı &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x2"
+      - "&7  ● &fElmas &8x100"
+      - "&7  ● &#ffd500500.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_BOOTS
+    required-smithing-template: 1
+    required-netherite-ingot: 2
+    required-diamond: 100
+    required-money: 500000
+    result-item: NETHERITE_BOOTS
+
+  # ─────────── ALETLER ───────────
+  netherite_sword:
+    slot: 28
+    display-material: NETHERITE_SWORD
+    display-name: "&#00D420Netherite Kılıç"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Kılıç &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x2"
+      - "&7  ● &fElmas &8x75"
+      - "&7  ● &#ffd500300.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_SWORD
+    required-smithing-template: 1
+    required-netherite-ingot: 2
+    required-diamond: 75
+    required-money: 300000
+    result-item: NETHERITE_SWORD
+
+  netherite_pickaxe:
+    slot: 29
+    display-material: NETHERITE_PICKAXE
+    display-name: "&#00D420Netherite Kazma"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Kazma &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x3"
+      - "&7  ● &fElmas &8x75"
+      - "&7  ● &#ffd500200.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_PICKAXE
+    required-smithing-template: 1
+    required-netherite-ingot: 3
+    required-diamond: 75
+    required-money: 200000
+    result-item: NETHERITE_PICKAXE
+
+  netherite_axe:
+    slot: 30
+    display-material: NETHERITE_AXE
+    display-name: "&#00D420Netherite Balta"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Balta &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x3"
+      - "&7  ● &fElmas &8x75"
+      - "&7  ● &#ffd500200.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_AXE
+    required-smithing-template: 1
+    required-netherite-ingot: 3
+    required-diamond: 75
+    required-money: 200000
+    result-item: NETHERITE_AXE
+
+  netherite_shovel:
+    slot: 31
+    display-material: NETHERITE_SHOVEL
+    display-name: "&#00D420Netherite Kürek"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Kürek &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x2"
+      - "&7  ● &fElmas &8x50"
+      - "&7  ● &#ffd500150.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_SHOVEL
+    required-smithing-template: 1
+    required-netherite-ingot: 2
+    required-diamond: 50
+    required-money: 150000
+    result-item: NETHERITE_SHOVEL
+
+  netherite_hoe:
+    slot: 32
+    display-material: NETHERITE_HOE
+    display-name: "&#00D420Netherite Çapa"
+    lore:
+      - ""
+      - "&7▎ &fGereksinimler:"
+      - "&7  ● &fElmas Çapa &7(Hasarsız) &8x1"
+      - "&7  ● &fDemirci Şablonu &8x1"
+      - "&7  ● &fNetherite Külçe &8x2"
+      - "&7  ● &fElmas &8x50"
+      - "&7  ● &#ffd500150.000 Dinar"
+      - ""
+      - "&#00D420▶ Üretmek için tıklayın!"
+    required-diamond-item: DIAMOND_HOE
+    required-smithing-template: 1
+    required-netherite-ingot: 2
+    required-diamond: 50
+    required-money: 150000
+    result-item: NETHERITE_HOE

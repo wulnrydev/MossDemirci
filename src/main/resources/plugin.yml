@@ -1,0 +1,23 @@
+name: MossDemirci
+version: '${project.version}'
+main: dev.wulnry.mossdemirci.MossDemirci
+api-version: '1.20'
+author: wulnrydev
+description: Özel Netherite üretim sistemi - Vanilla netherite engelleyici
+
+depend:
+  - Vault
+
+commands:
+  demirci:
+    description: Demirci menüsünü açar
+    usage: /demirci [reload]
+    permission: mossdemirci.use
+
+permissions:
+  mossdemirci.use:
+    description: Demirci menüsünü kullanma izni
+    default: true
+  mossdemirci.reload:
+    description: Config yeniden yükleme izni
+    default: op
